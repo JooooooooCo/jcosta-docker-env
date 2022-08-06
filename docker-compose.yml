@@ -9,7 +9,8 @@ services:
     volumes:
       - ./www:/var/www/html
     ports:
-      - 8000:80
+      - 8080:80
+      - 8000:8000
     links:
       - jcosta_mysql
 
