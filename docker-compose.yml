@@ -5,12 +5,25 @@ services:
     container_name: jcosta_apache_php74
     build:
       context: ./
-      dockerfile: ./Dockerfile
+      dockerfile: ./images/php74/Dockerfile
     volumes:
       - ./www:/var/www/html
     ports:
       - 8080:80
       - 8000:8000
+    links:
+      - jcosta_mysql
+      
+  jcosta_apache_php802:
+    container_name: jcosta_apache_php802
+    build:
+      context: ./
+      dockerfile: ./images/php802/Dockerfile
+    volumes:
+      - ./www:/var/www/html
+    ports:
+      - 8085:80
+      - 8005:8000
     links:
       - jcosta_mysql
 
