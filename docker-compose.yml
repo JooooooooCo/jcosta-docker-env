@@ -18,7 +18,7 @@ services:
     image: mysql:5.7
     container_name: jcosta_mysql
     ports:
-      - "3397:3306"
+      - "3306:3306"
     volumes:
       - ./mysql:/var/lib/mysql
     environment:
